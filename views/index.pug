@@ -2,9 +2,9 @@ extends layout
 
 block content
   h1=title
-  p Welcom to #{title}
-  if user
-    p Hello, #{user.username}
-    a(href="/logout") ログアウト
-  else
-    a(href="/login") ログイン
+  h2 新規投稿
+  form(action="/posts", method="post")
+    div
+      textarea(name="content", cols="40", rows="4")
+    div
+      button(type="submit") 投稿
